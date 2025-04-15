@@ -16,7 +16,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                      <a class="nav-link" aria-current="page" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Quienes somos</a>
@@ -39,7 +39,7 @@
             </nav>
           </div>
           <div class="col col-right d-none d-md-flex">
-            <div class="h-phone md-hide" style="background-size: cover;">
+            <div class="h-phone md-hide">
               <span>&iquest;Necesita&nbsp;Ayuda?</span><i class="fa fa-phone"></i> 971 100 9999
             </div>
           </div>
@@ -74,6 +74,29 @@
     .img-logo {
       height: 40px;
     }
+
+    .nav-link {
+      font-weight: 600;
+    }
+
+    .h-phone {
+      position: relative;
+      font-weight: bold;
+      color: black;
+      padding-left: 40px;
+      font-size: 18px;
+      padding-top: 10px;
+
+      span {
+        display: inline-block;
+        position: absolute;
+        left: 40px;
+        top: 0;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--main-color);
+      }
+    }
   }
 
   .header-fixed {
@@ -82,5 +105,7 @@
     padding: 0;
     background-color: white;
     padding: 10px 0;
+    box-shadow: 0 4px 6px 0 rgba(10, 10, 10, 0.05);
+    border: 0;
   }
 </style>
