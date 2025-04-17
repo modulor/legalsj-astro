@@ -1,0 +1,28 @@
+---
+const { title = "" } = Astro.props;
+---
+
+<section class="title">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>{title}</h1>
+        <div class="small-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section.title {
+    padding: 120px 0;
+    background-color: aliceblue;
+
+    .small-line {
+      width: 100px;
+      height: 3px;
+      background-color: var(--color-primary);
+      margin: 0 auto;
+    }
+  }
+</style>
