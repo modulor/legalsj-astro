@@ -1,0 +1,13 @@
+:root {
+  --bs-primary: var(--color-primary);
+}
+
+.btn {
+  border-radius: 0;
+  padding: 12px 24px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}

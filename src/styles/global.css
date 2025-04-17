@@ -1,1 +1,35 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+@import "./variables.css";
+@import "custom-bootstrap.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter Variable", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(#ffffff);
+  color: var(#1a1a1a);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "EB Garamond Variable", serif !important;
+  letter-spacing: -1px;
+  margin: 0 0 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
