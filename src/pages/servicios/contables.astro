@@ -1,8 +1,104 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Title from "../../components/Title.astro";
+import PageContent from "../../components/PageContent.astro";
+import ModalsContables from "../../components/ModalsContables.astro";
 ---
 
 <Layout>
   <Title title={"Servicios Contables"} />
+  <PageContent>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-calculator"></i>
+              <p>Contabilidad en General</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contabilidadModal">VER MÁS</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-user-tie"></i>
+              <p>Proceso de Nómina</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nominaModal">VER MÁS</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-layer-group"></i>
+              <p>Control de Acumulados</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#acumuladosModal">VER MÁS</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-file-invoice"></i>
+              <p>Elaboración de Nóminas Especiales</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#nominasEspecialesModal">VER MÁS</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-people-group"></i>
+              <p>Obligaciones Obrero - Patronales</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#obreroPatronalesModal">VER MÁS</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-coins"></i>
+              <p>Impuestos</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#impuestosModal">VER MÁS</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-users"></i>
+              <p>Portal de colaboradores</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portalColaboradoresModal"
+                >VER MÁS</button
+              >
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-file-contract"></i>
+              <p>Materia Fiscal</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fiscalModal">VER MÁS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageContent>
+  <ModalsContables />
 </Layout>
+
+<style>
+  .box {
+    background-color: #f8f8f8;
+    text-align: center;
+    min-height: 180px;
+    padding: 40px 0;
+
+    i {
+      font-size: 48px;
+      color: var(--color-primary);
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+</style>
