@@ -1,8 +1,143 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
+import PageContent from "../components/PageContent.astro";
 ---
 
 <Layout>
   <Title title={"Quienes Somos"} />
+  <PageContent>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="row mb-4">
+          <div class="col-lg-6">
+            <p>
+              Somos una empresa que busca asegurar que cada cliente tenga una experiencia positiva, necesitamos que todo el equipo que
+              conforma tu empresa actúe unido para dar las soluciones que necesitas. Eso es SINERGIA, la Unión de Fuerzas, actuamos
+              realmente como equipo para generar un mayor impacto positivo en cada cliente. No crearemos sinergia si trabajamos por nuestra
+              cuenta, aunque lo hagamos al mismo tiempo.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img src="/img/about-us.jpg" alt="Quienes somos" class="img-fluid" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-md-0">
+            <div class="box">
+              <h2>Misión</h2>
+              <p>
+                Nuestra misión es proporcionar servicios jurídicos, contables y fiscales de la más alta calidad, asegurando la máxima
+                eficiencia y compromiso con nuestros clientes. Nos dedicamos a resolver sus problemas legales, optimizar su gestión contable
+                y garantizar el cumplimiento fiscal, brindando soluciones integrales y personalizadas que contribuyan al éxito y
+                tranquilidad de nuestros clientes.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box">
+              <h2>Visión</h2>
+              <p>
+                Ser reconocidos como el despacho líder en servicios jurídicos, contables y fiscales, destacándonos por nuestra ética,
+                profesionalismo e innovación. Aspiramos a construir relaciones duraderas con nuestros clientes, basadas en la confianza y
+                excelencia, y a convertirnos en un referente en el sector, adaptándonos continuamente a los cambios y necesidades del
+                mercado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageContent>
+  <section class="our-values">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <h2>Valores</h2>
+          <div class="small-border"></div>
+          <div class="row mt-5">
+            <div class="col-lg-6 offset-lg-0 col-8 offset-2 mb-4">
+              <div class="a-value">
+                <i class="fa-solid fa-handshake"></i>
+                <p>Ética</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-0 col-8 offset-2 mb-4">
+              <div class="a-value">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <p>Justicia</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-0 col-8 offset-2 mb-4">
+              <div class="a-value">
+                <i class="fa-solid fa-people-group"></i>
+                <p>Confianza</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-0 col-8 offset-2 mb-4">
+              <div class="a-value">
+                <i class="fa-solid fa-lock"></i>
+                <p>Seguridad</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-0 col-8 offset-2 mb-4">
+              <div class="a-value">
+                <i class="fa-solid fa-user-tie"></i>
+                <p>Profesionalismo</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-0 col-8 offset-2">
+              <div class="a-value">
+                <i class="fa-solid fa-shield-halved"></i>
+                <p>Confidencialidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .small-border {
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: 0 auto;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  .box {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  .our-values {
+    background-color: rgb(96, 98, 103);
+    background-size: cover;
+    color: white;
+    padding: 90px 0;
+  }
+
+  .a-value {
+    background-color: rgb(74, 77, 83);
+    text-align: center;
+    min-height: 180px;
+    padding: 40px 0;
+
+    i {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: rgb(242, 249, 255);
+    }
+
+    p {
+      margin-bottom: 0;
+      font-weight: 300;
+    }
+  }
+</style>
