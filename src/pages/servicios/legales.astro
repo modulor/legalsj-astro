@@ -1,8 +1,67 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Title from "../../components/Title.astro";
+import PageContent from "../../components/PageContent.astro";
+import ModalsLegales from "../../components/ModalsLegales.astro";
 ---
 
 <Layout>
   <Title title={"Servicios Legales"} />
+  <PageContent>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-building"></i>
+              <p>Materia Corporativa</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#corporativaModal"> VER MÁS </button>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-users-gear"></i>
+              <p>Materia Laboral</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#laboralModal"> VER MÁS </button>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-file-contract"></i>
+              <p>Materia Mercantil</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mercantilModal"> VER MÁS </button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="box">
+              <i class="fa-solid fa-globe"></i>
+              <p>Materia Migratoria</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#migratoriaModal"> VER MÁS </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageContent>
+  <ModalsLegales />
 </Layout>
+
+<style>
+  .box {
+    background-color: #f8f8f8;
+    text-align: center;
+    min-height: 180px;
+    padding: 40px 0;
+
+    i {
+      font-size: 48px;
+      color: var(--color-primary);
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+</style>

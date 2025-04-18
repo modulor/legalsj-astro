@@ -3,8 +3,8 @@
 }
 
 .btn {
-  border-radius: 0;
-  padding: 12px 24px;
+  border-radius: 3px;
+  padding: 8px 30px;
 }
 
 .btn-primary {
