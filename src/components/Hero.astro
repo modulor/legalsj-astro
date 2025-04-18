@@ -5,7 +5,7 @@
 <section class="hero">
   <div class="container">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-xl-6">
         <div class="hero-data">
           <span>PROTEGEMOS SU TRANQUILIDAD</span>
           <h1>Legal Servicios Jurídicos</h1>
@@ -27,9 +27,21 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    padding-top: 250px;
-    min-height: 90vh;
     color: #000;
+
+    @media (max-width: 768px) {
+      min-height: 90vh;
+      padding-top: 250px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      padding: 140px 0;
+    }
+
+    @media (min-width: 1025px) {
+      min-height: 90vh;
+      padding-top: 250px;
+    }
 
     .hero-data {
       text-align: center;
@@ -38,7 +50,7 @@
         font-weight: 300;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1025px) {
         text-align: left;
       }
 
