@@ -3,6 +3,12 @@
 ---
 
 <section class="hero">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="/videos/cdmx.mp4" type="video/mp4" />
+    Tu navegador no soporta videos HTML5.
+  </video>
+
   <div class="container">
     <div class="row">
       <div class="col-xl-6">
@@ -22,48 +28,69 @@
 
 <style>
   .hero {
-    background-color: #f5f5f5;
-    background-image: url("/img/bg-hero.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    color: #000;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: #000; /* Color de fondo de respaldo */
+    color: #fff;
+  }
 
-    @media (max-width: 768px) {
-      min-height: 90vh;
-      padding-top: 250px;
-    }
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.4; /* Ajusta si quieres más claridad del video */
+  }
 
-    @media (min-width: 769px) and (max-width: 1024px) {
-      padding: 140px 0;
+  .hero .container {
+    position: relative;
+    z-index: 1; /* Encima del video */
+  }
+
+  .hero-data {
+    text-align: center;
+
+    p {
+      font-weight: 300;
     }
 
     @media (min-width: 1025px) {
-      min-height: 90vh;
-      padding-top: 250px;
+      text-align: left;
     }
 
-    .hero-data {
-      text-align: center;
+    span {
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+    }
 
-      p {
-        font-weight: 300;
-      }
+    h1 {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+  }
 
-      @media (min-width: 1025px) {
-        text-align: left;
-      }
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 250px;
+    }
+  }
 
-      span {
-        font-size: 12px;
-        color: var(--color-primary);
-        font-weight: 600;
-      }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+      padding: 140px 0;
+    }
+  }
 
-      h1 {
-        font-size: 48px;
-        margin: 20px 0;
-      }
+  @media (min-width: 1025px) {
+    .hero {
+      padding-top: 250px;
     }
   }
 </style>
