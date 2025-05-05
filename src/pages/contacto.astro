@@ -11,14 +11,25 @@ import PageContent from "../components/PageContent.astro";
       <div class="col-lg-8 offset-lg-2">
         <div class="row">
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.303626748782!2d-99.12660008742147!3d19.48556858172928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9a1e7a3df9b%3A0x727d8ff45a255513!2sAv.%20Insurgentes%20Nte.%201501%2C%20Tepeyac%20Insurgentes%2C%20Gustavo%20A.%20Madero%2C%2007020%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1745001111026!5m2!1ses!2smx"
-              width="100%"
-              height="350"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="form-mensaje" class="alert alert-success d-none" role="alert">¡Gracias! Tu mensaje ha sido enviado.</div>
+            <form action="https://formspree.io/f/xzzrrael" method="POST" class="p-4 border rounded bg-light shadow-sm">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Tu nombre" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Tu correo" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" class="form-control" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
           </div>
           <div class="col-lg-6">
             <div class="mb-4">
@@ -36,9 +47,19 @@ import PageContent from "../components/PageContent.astro";
             </div>
             <div class="mb-4">
               <h4>Teléfono</h4>
-              <a href="https://wa.me/+5219711009999" class="btn btn-success" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> 971 100 9999
+              <a href="https://wa.me/+5215540063684" class="btn btn-success" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> 554 006 3684
               </a>
+            </div>
+            <div class="mb-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.303626748782!2d-99.12660008742147!3d19.48556858172928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f9a1e7a3df9b%3A0x727d8ff45a255513!2sAv.%20Insurgentes%20Nte.%201501%2C%20Tepeyac%20Insurgentes%2C%20Gustavo%20A.%20Madero%2C%2007020%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1745001111026!5m2!1ses!2smx"
+                width="100%"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -46,3 +67,32 @@ import PageContent from "../components/PageContent.astro";
     </div>
   </PageContent>
 </Layout>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const mensaje = document.getElementById("form-mensaje");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Enviando...";
+
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        mensaje.classList.remove("d-none");
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Enviar";
+    });
+  });
+</script>
