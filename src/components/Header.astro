@@ -42,6 +42,11 @@ import Navbar from "./Navbar.astro";
   </div>
   <div class="offcanvas-body">
     <Navbar isMobile={true} />
+    <div class="h-phone">
+      <a href="https://wa.me/+5215540063684" target="_blank" class="phone-link">
+        <span>&iquest;Necesita&nbsp;Ayuda?</span><i class="fa-brands fa-whatsapp"></i> 554 006 3684
+      </a>
+    </div>
   </div>
 </div>
 
@@ -72,37 +77,6 @@ import Navbar from "./Navbar.astro";
     .img-logo {
       height: 40px;
     }
-
-    .h-phone {
-      position: relative;
-      font-weight: bold;
-      color: black;
-      padding-left: 20px;
-      font-size: 18px;
-      padding-top: 10px;
-
-      a.phone-link:hover,
-      a.phone-link:active,
-      a.phone-link:visited,
-      a.phone-link:link {
-        text-decoration: none;
-        color: black;
-      }
-
-      span {
-        display: inline-block;
-        position: absolute;
-        left: 40px;
-        top: 0;
-        font-size: 12px;
-        font-weight: 500;
-        color: var(--color-primary);
-      }
-
-      i {
-        color: var(--color-primary);
-      }
-    }
   }
 
   .header-fixed {
@@ -113,5 +87,36 @@ import Navbar from "./Navbar.astro";
     padding: 10px 0;
     box-shadow: 0 4px 6px 0 rgba(10, 10, 10, 0.05);
     border: 0;
+  }
+
+  .h-phone {
+    position: relative;
+    font-weight: bold;
+    color: black;
+    padding-left: 20px;
+    font-size: 18px;
+    padding-top: 10px;
+
+    a.phone-link:hover,
+    a.phone-link:active,
+    a.phone-link:visited,
+    a.phone-link:link {
+      text-decoration: none;
+      color: black;
+    }
+
+    span {
+      display: inline-block;
+      position: absolute;
+      left: 40px;
+      top: 0;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-primary);
+    }
+
+    i {
+      color: var(--color-primary);
+    }
   }
 </style>

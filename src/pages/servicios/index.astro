@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
+import PageContent from "../../components/PageContent.astro";
+---
+
+<Layout>
+  <Title title={"Servicios"} />
+  <PageContent>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="box">
+              <i class="fa-solid fa-gavel"></i>
+              <p>Servicios Legales</p>
+              <a href="/servicios/legales" class="btn btn-primary">VER MÁS</a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="box">
+              <i class="fa-solid fa-calculator"></i>
+              <p>Servicios Contables</p>
+              <a href="/servicios/contables" class="btn btn-primary">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </PageContent>
+</Layout>
+<style>
+  .box {
+    background-color: #f8f8f8;
+    text-align: center;
+    min-height: 180px;
+    padding: 40px 0;
+
+    i {
+      font-size: 48px;
+      color: var(--color-primary);
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+</style>
